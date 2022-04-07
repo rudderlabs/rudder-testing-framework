@@ -10,8 +10,11 @@ jobs:
     runs-on: macOS-latest
     steps:
     - uses: actions/checkout@v1
+    - name: Install Cocoapods
+      run: gem install cocoapods
     - name: Publish to CocoaPod register
       env:
         COCOAPODS_TRUNK_TOKEN: ${{ secrets.COCOAPODS_TRUNK_TOKEN }}
       run: |
-        pod trunk push RudderTestingFramework.podspec
+        pod lib lint --allow-warnings
+        pod trunk push --allow-warnings
