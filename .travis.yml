@@ -1,6 +1,5 @@
 language: objective-c
 osx_image: xcode13.4
-xcode_scheme: RudderTestingFramework
 deploy:
   provider: script
   script: pod trunk push --allow-warnings
