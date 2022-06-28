@@ -2,6 +2,6 @@ language: objective-c
 osx_image: xcode13.4
 deploy:
   provider: script
-  script: pod trunk push --allow-warnings
+  script: pod trunk push --allow-warnings --verbose
   on:
     tags: true
