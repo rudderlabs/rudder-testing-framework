@@ -3,5 +3,5 @@ jobs:
     - stage: deploy
       os: osx
       language: objective-c
-      osx_image: xcode13
+      osx_image: xcode13.4
       script: pod trunk push --allow-warnings
