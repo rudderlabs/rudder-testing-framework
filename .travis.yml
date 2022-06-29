@@ -1,3 +1,12 @@
+if [[ -n $TRAVIS_TAG ]]; then
+  # Travis does a shallow clone by default
+  # so `master` is not present in the local metadata
+  # in a build for another branch
+  git fetch origin master:master   
+  if ! (git branch --contains "$TRAVIS_TAG" | grep -qxE '. master'); then
+    travis_terminate 0    # quit the build early
+  fi
+fi
 os: osx
 language: objective-c
 osx_image: xcode13.4
@@ -5,6 +14,3 @@ jobs:
   include:
     - stage: deploy
       script: pod trunk push --allow-warnings
-      on:
-        branch: "master"
-        tags: true
