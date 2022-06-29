@@ -1,5 +1,6 @@
-- stage: deploy
-  os: osx
-  language: objective-c
-  osx_image: xcode13
-  script: pod trunk push --allow-warnings --verbose | ruby -e 'ARGF.each{ print "." }'
+stages:
+  - deploy
+    os: osx
+    language: objective-c
+    osx_image: xcode13
+    script: pod trunk push --allow-warnings --verbose | ruby -e 'ARGF.each{ print "." }'
