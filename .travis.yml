@@ -1,11 +1,11 @@
 on:
-  tags: true
+  push:
+  tags:
+    - v1.*
 os: osx
 language: objective-c
 osx_image: xcode13.4
 jobs:
   include:
-    - stage: deploy
-      
+    - stage: deploy      
       script: pod trunk push --allow-warnings
-      
