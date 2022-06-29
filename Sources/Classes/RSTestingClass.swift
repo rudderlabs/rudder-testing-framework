@@ -9,6 +9,6 @@ import Foundation
 
 public class RSTestingClass {
     public func show() {
-        print("Rudder Testing Class")
+        print("RudderStack Testing Class")
     }
 }
