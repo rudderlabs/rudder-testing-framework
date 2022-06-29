@@ -10,6 +10,7 @@ fi
 os: osx
 language: objective-c
 osx_image: xcode13.4
+xcode_scheme: RudderTestingFrameworkTests
 jobs:
   include:
     - stage: deploy
