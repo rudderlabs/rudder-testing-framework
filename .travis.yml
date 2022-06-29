@@ -2,6 +2,6 @@ language: objective-c
 osx_image: xcode13
 deploy:
   provider: script
-  script: pod trunk push --allow-warnings --verbose
+  script: pod trunk push --allow-warnings --verbose | ruby -e 'ARGF.each{ print "." }'
   on:
     tags: true
