@@ -1,14 +1,10 @@
-on:
-  push:
-    tags:
-      - v1.*
 branches:
   only:
-  - master
+  - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 os: osx
 language: objective-c
 osx_image: xcode13.4
 jobs:
   include:
-    - stage: deploy      
+    - stage: deploy
       script: pod trunk push --allow-warnings
