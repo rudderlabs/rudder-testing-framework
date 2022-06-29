@@ -4,9 +4,9 @@
 #    travis_terminate 0    # quit the build early
 #  fi
 #fi
-on:
-  pull_request:
-    branches: [master]
+branches:
+  only: 
+    - master
 os: osx
 language: objective-c
 osx_image: xcode13.4
