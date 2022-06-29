@@ -1,5 +1,6 @@
 branches:
   only:
+  - master
   - /^v\d+\.\d+(\.\d+)?(-\S*)?$/
 os: osx
 language: objective-c
