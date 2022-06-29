@@ -1,7 +1,7 @@
 on:
   push:
-  tags:
-    - v1.*
+    tags:
+      - v1.*
 os: osx
 language: objective-c
 osx_image: xcode13.4
