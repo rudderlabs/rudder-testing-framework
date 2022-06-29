@@ -8,14 +8,28 @@
 
 /* Begin PBXBuildFile section */
 		ED2A28F82770570400646788 /* RudderTestingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2A28F72770570400646788 /* RudderTestingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDAE4EB2286C488500AACDB5 /* RudderTestingFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */; };
+		EDAE4EB3286C488500AACDB5 /* RudderTestingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2A28EB2770560400646788 /* RudderTestingFramework.framework */; };
 		EDF68FE727D1FD620005AAC6 /* RSTestingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF68FE627D1FD620005AAC6 /* RSTestingClass.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EDAE4EB4286C488500AACDB5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED2A28E22770560400646788 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = ED2A28EA2770560400646788;
+			remoteInfo = RudderTestingFramework;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		ED2A28EB2770560400646788 /* RudderTestingFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = RudderTestingFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED2A28F72770570400646788 /* RudderTestingFramework.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RudderTestingFramework.h; sourceTree = "<group>"; };
 		ED2A28FA2770591E00646788 /* LICENSE */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 		ED2A28FC2770591E00646788 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		EDAE4EAF286C488500AACDB5 /* RudderTestingFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudderTestingFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudderTestingFrameworkTests.swift; sourceTree = "<group>"; };
 		EDC132B127D9DBF400AFD833 /* RudderTestingFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RudderTestingFramework.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EDF68FE627D1FD620005AAC6 /* RSTestingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTestingClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -25,6 +39,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDAE4EAC286C488500AACDB5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDAE4EB3286C488500AACDB5 /* RudderTestingFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +60,7 @@
 				ED2A28FC2770591E00646788 /* README.md */,
 				EDC132B127D9DBF400AFD833 /* RudderTestingFramework.podspec */,
 				ED2A28F52770570400646788 /* Sources */,
+				EDAE4EB0286C488500AACDB5 /* RudderTestingFrameworkTests */,
 				ED2A28EC2770560400646788 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				ED2A28EB2770560400646788 /* RudderTestingFramework.framework */,
+				EDAE4EAF286C488500AACDB5 /* RudderTestingFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -73,6 +97,14 @@
 				EDF68FE627D1FD620005AAC6 /* RSTestingClass.swift */,
 			);
 			path = Classes;
+			sourceTree = "<group>";
+		};
+		EDAE4EB0286C488500AACDB5 /* RudderTestingFrameworkTests */ = {
+			isa = PBXGroup;
+			children = (
+				EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */,
+			);
+			path = RudderTestingFrameworkTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -107,6 +139,24 @@
 			productReference = ED2A28EB2770560400646788 /* RudderTestingFramework.framework */;
 			productType = "com.apple.product-type.framework";
 		};
+		EDAE4EAE286C488500AACDB5 /* RudderTestingFrameworkTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EDAE4EB8286C488500AACDB5 /* Build configuration list for PBXNativeTarget "RudderTestingFrameworkTests" */;
+			buildPhases = (
+				EDAE4EAB286C488500AACDB5 /* Sources */,
+				EDAE4EAC286C488500AACDB5 /* Frameworks */,
+				EDAE4EAD286C488500AACDB5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EDAE4EB5286C488500AACDB5 /* PBXTargetDependency */,
+			);
+			name = RudderTestingFrameworkTests;
+			productName = RudderTestingFrameworkTests;
+			productReference = EDAE4EAF286C488500AACDB5 /* RudderTestingFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -114,11 +164,15 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
 					ED2A28EA2770560400646788 = {
 						CreatedOnToolsVersion = 13.2.1;
 						LastSwiftMigration = 1320;
+					};
+					EDAE4EAE286C488500AACDB5 = {
+						CreatedOnToolsVersion = 13.4.1;
 					};
 				};
 			};
@@ -136,12 +190,20 @@
 			projectRoot = "";
 			targets = (
 				ED2A28EA2770560400646788 /* RudderTestingFramework */,
+				EDAE4EAE286C488500AACDB5 /* RudderTestingFrameworkTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		ED2A28E92770560400646788 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EDAE4EAD286C488500AACDB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -159,7 +221,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		EDAE4EAB286C488500AACDB5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EDAE4EB2286C488500AACDB5 /* RudderTestingFrameworkTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EDAE4EB5286C488500AACDB5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = ED2A28EA2770560400646788 /* RudderTestingFramework */;
+			targetProxy = EDAE4EB4286C488500AACDB5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		ED2A28F02770560400646788 /* Debug */ = {
@@ -347,6 +425,40 @@
 			};
 			name = Release;
 		};
+		EDAE4EB6286C488500AACDB5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6DGB573C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudderstack.RudderTestingFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EDAE4EB7286C488500AACDB5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = Z6DGB573C6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rudderstack.RudderTestingFrameworkTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -364,6 +476,15 @@
 			buildConfigurations = (
 				ED2A28F32770560400646788 /* Debug */,
 				ED2A28F42770560400646788 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EDAE4EB8286C488500AACDB5 /* Build configuration list for PBXNativeTarget "RudderTestingFrameworkTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDAE4EB6286C488500AACDB5 /* Debug */,
+				EDAE4EB7286C488500AACDB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

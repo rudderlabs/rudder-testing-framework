@@ -8,7 +8,7 @@
 import Foundation
 
 public class RSTestingClass {
-    public func show() {
-        print("Rudder Testing Class")
+    public func countString(_ string: String) -> Int {
+        return string.count
     }
 }
