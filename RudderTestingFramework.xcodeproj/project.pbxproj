@@ -10,6 +10,7 @@
 		ED2A28F82770570400646788 /* RudderTestingFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = ED2A28F72770570400646788 /* RudderTestingFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EDAE4EB2286C488500AACDB5 /* RudderTestingFrameworkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */; };
 		EDAE4EB3286C488500AACDB5 /* RudderTestingFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED2A28EB2770560400646788 /* RudderTestingFramework.framework */; };
+		EDAE4EBD286D7C5000AACDB5 /* RudderTestingFrameworkTests2.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAE4EBC286D7C5000AACDB5 /* RudderTestingFrameworkTests2.swift */; };
 		EDF68FE727D1FD620005AAC6 /* RSTestingClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF68FE627D1FD620005AAC6 /* RSTestingClass.swift */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		EDAE4EAF286C488500AACDB5 /* RudderTestingFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudderTestingFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudderTestingFrameworkTests.swift; sourceTree = "<group>"; };
 		EDAE4EB9286C4DFD00AACDB5 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
+		EDAE4EBC286D7C5000AACDB5 /* RudderTestingFrameworkTests2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudderTestingFrameworkTests2.swift; sourceTree = "<group>"; };
 		EDC132B127D9DBF400AFD833 /* RudderTestingFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RudderTestingFramework.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EDF68FE627D1FD620005AAC6 /* RSTestingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTestingClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */,
+				EDAE4EBC286D7C5000AACDB5 /* RudderTestingFrameworkTests2.swift */,
 			);
 			path = RudderTestingFrameworkTests;
 			sourceTree = "<group>";
@@ -227,6 +230,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EDAE4EBD286D7C5000AACDB5 /* RudderTestingFrameworkTests2.swift in Sources */,
 				EDAE4EB2286C488500AACDB5 /* RudderTestingFrameworkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
