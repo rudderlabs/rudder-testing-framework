@@ -22,8 +22,8 @@ jobs:
 #    rooms:
 #      - rudderlabs:KcojYvbjDyIbk7NU8AyDraMA#sdk-devs_private
 notifications:
+  if: branch = master-v2
   slack: rudderlabs:KcojYvbjDyIbk7NU8AyDraMA
-  template:
-      - "%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}"
-      - "Change view : %{compare_url}"
-      - "Build details : %{build_url}"
+    template:
+      - "%{repository_slug}#%{build_number} (%{branch} - %{commit}: %{author}): %{message}"
+      - "Status: %{result}"
