@@ -4,9 +4,9 @@
 #    travis_terminate 0    # quit the build early
 #  fi
 #fi
-branches:
-  only: 
-    - master
+#branches:
+#  only:
+#    - master
 os: osx
 language: objective-c
 osx_image: xcode13.4
@@ -15,6 +15,8 @@ jobs:
     - stage: "Tests"
       name: "Unit Test"
       script: 'xcodebuild test -project RudderTestingFramework.xcodeproj -scheme RudderTestingFrameworkTests -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO'
-#    - stage: deploy
-#      name: "Release to Cocoapods"
-#      script: pod trunk push --allow-warnings
+    - stage: deploy
+      name: "Release to Cocoapods"
+      script: pod trunk push --allow-warnings
+      on:
+        branch: master
