@@ -10,6 +10,7 @@ language: objective-c
 osx_image: xcode13.4
 stages:
   - name: test
+    provider: script
     script: 'xcodebuild test -project RudderTestingFramework.xcodeproj -scheme RudderTestingFrameworkTests -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests" -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests2" | xcpretty'
   - name: deploy
     if: branch = master
