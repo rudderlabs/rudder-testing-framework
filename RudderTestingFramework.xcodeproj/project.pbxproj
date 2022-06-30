@@ -30,6 +30,7 @@
 		ED2A28FC2770591E00646788 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		EDAE4EAF286C488500AACDB5 /* RudderTestingFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RudderTestingFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDAE4EB1286C488500AACDB5 /* RudderTestingFrameworkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RudderTestingFrameworkTests.swift; sourceTree = "<group>"; };
+		EDAE4EB9286C4DFD00AACDB5 /* .travis.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .travis.yml; sourceTree = "<group>"; };
 		EDC132B127D9DBF400AFD833 /* RudderTestingFramework.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = RudderTestingFramework.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		EDF68FE627D1FD620005AAC6 /* RSTestingClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RSTestingClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -56,6 +57,7 @@
 		ED2A28E12770560400646788 = {
 			isa = PBXGroup;
 			children = (
+				EDAE4EB9286C4DFD00AACDB5 /* .travis.yml */,
 				ED2A28FA2770591E00646788 /* LICENSE */,
 				ED2A28FC2770591E00646788 /* README.md */,
 				EDC132B127D9DBF400AFD833 /* RudderTestingFramework.podspec */,
