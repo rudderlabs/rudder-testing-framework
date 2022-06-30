@@ -8,26 +8,15 @@
 os: osx
 language: objective-c
 osx_image: xcode13.4
-stages:
-  - name: test
-    provider: script
-    script: 'xcodebuild test -project RudderTestingFramework.xcodeproj -scheme RudderTestingFrameworkTests -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests" -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests2" | xcpretty'
-  - name: deploy
-    if: branch = master
-    script: pod trunk push --allow-warnings
-    on:
-      tags: true
-#jobs:
-#  include:
-#    - stage: "Tests"
-#      name: "Running Test Cases"
-#      script: 'xcodebuild test -project RudderTestingFramework.xcodeproj -scheme RudderTestingFrameworkTests -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests" -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests2" | xcpretty'
-#    - stage: "Release"
-#      if: branch = master-v2
-#      name: "Release to Cocoapods"
-#      script: pod trunk push --allow-warnings
-#      on:
-#        tags: true
+jobs:
+  include:
+    - stage: "Tests"
+      name: "Running Test Cases"
+      script: 'xcodebuild test -project RudderTestingFramework.xcodeproj -scheme RudderTestingFrameworkTests -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests" -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests2" | xcpretty'
+    - stage: "Release"
+      if: branch = master-v2
+      name: "Release to Cocoapods"
+      script: pod trunk push --allow-warnings
 notifications:
   if: branch = master-v2
   slack:
