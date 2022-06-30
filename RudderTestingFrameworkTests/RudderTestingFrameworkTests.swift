@@ -29,4 +29,10 @@ class RudderTestingFrameworkTests: XCTestCase {
         
         XCTAssertFalse(count == 3)
     }
+    
+    func testExample4() {
+        let count = rsClass.countString("Batman")
+        
+        XCTAssertFalse(count == 3)
+    }
 }
