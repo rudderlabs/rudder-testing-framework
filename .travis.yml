@@ -18,4 +18,8 @@ jobs:
       name: "Release to Cocoapods"
       script: pod trunk push --allow-warnings
 notifications:
-  slack: rudderlabs:KcojYvbjDyIbk7NU8AyDraMA
+  slack:
+    rooms:
+      - rudderlabs:KcojYvbjDyIbk7NU8AyDraMA#sdk-devs_private
+#notifications:
+#  slack: rudderlabs:KcojYvbjDyIbk7NU8AyDraMA
