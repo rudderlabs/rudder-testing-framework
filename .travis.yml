@@ -17,6 +17,8 @@ jobs:
       if: branch = master-v2
       name: "Release to Cocoapods"
       script: pod trunk push --allow-warnings
+      on:
+        tags: true
 notifications:
   if: branch = master-v2
   slack:
@@ -25,4 +27,3 @@ notifications:
     template:
       - "%{commit_message}"
       - "Release of %{repository_name} is %{result}"
-    on_pull_requests: false
