@@ -18,7 +18,7 @@ jobs:
       name: "Release to Cocoapods"
       script: pod trunk push --allow-warnings
 notifications:
-  if: branch = master-v2
+  if: branch ~= ^\d+\.\d+\.\d+$
   slack:
     rooms:
       - rudderlabs:KcojYvbjDyIbk7NU8AyDraMA#sdk-devs_private
