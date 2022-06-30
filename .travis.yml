@@ -19,5 +19,3 @@ jobs:
       if: branch = master
       name: "Release to Cocoapods"
       script: pod trunk push --allow-warnings
-      on:
-        branch: master
