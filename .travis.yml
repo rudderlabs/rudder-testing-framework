@@ -17,15 +17,11 @@ jobs:
       if: branch = master
       name: "Release to Cocoapods"
       script: pod trunk push --allow-warnings
-#notifications:
-#  slack:
-#    rooms:
-#      - rudderlabs:KcojYvbjDyIbk7NU8AyDraMA#sdk-devs_private
 notifications:
   if: branch = master-v2
   slack:
     rooms:
       - rudderlabs:KcojYvbjDyIbk7NU8AyDraMA#sdk-devs_private
     template:
-      - "Release of <'https://github.com/rudderlabs/rudder-testing-framework'|#%{repository_name}> is %{result}"
       - "%{commit_message}"
+      - "Release of %{repository_name} is %{result}"
