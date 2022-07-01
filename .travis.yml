@@ -13,12 +13,12 @@ jobs:
     - stage: "Tests"
       name: "Running Test Cases"
       script: 'xcodebuild test -project RudderTestingFramework.xcodeproj -scheme RudderTestingFrameworkTests -sdk iphonesimulator -destination "platform=iOS Simulator,OS=15.5,name=iPhone 13" ONLY_ACTIVE_ARCH=NO CODE_SIGNING_REQUIRED=NO -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests" -skip-testing "RudderTestingFrameworkTests/RudderTestingFrameworkTests2" | xcpretty'
-    - stage: deploy
-      if: branch = master
+    - stage: "Release"
+      if: branch ~= ^\d+\.\d+\.\d+$
       name: "Release to Cocoapods"
       script: pod trunk push --allow-warnings
 notifications:
-  if: branch = master-v2
+  if: branch ~= ^\d+\.\d+\.\d+$
   slack:
     rooms:
       - rudderlabs:KcojYvbjDyIbk7NU8AyDraMA#sdk-devs_private
